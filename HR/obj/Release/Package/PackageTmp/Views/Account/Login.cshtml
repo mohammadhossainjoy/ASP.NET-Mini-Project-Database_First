@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-box {
+            background: #e9ecef; /* হালকা ডার্ক শেড */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 400px;
+        }
+
+            .login-box h3 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-weight: 600;
+                color: #212529;
+            }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h3>Login</h3>
+
+        @if (!String.IsNullOrEmpty(ViewBag.Error as string))
+        {
+            <div class="alert alert-danger">@ViewBag.Error</div>
+        }
+
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { autocomplete = "off" }))
+        {
+            <div class="mb-3">
+                @Html.Label("email")
+                @Html.TextBox("email", null, new { @class = "form-control", type = "email", required = "required", autocomplete = "off" })
+            </div>
+            <div class="mb-3">
+                @Html.Label("password")
+                @Html.Password("password", null, new { @class = "form-control", required = "required", autocomplete = "off" })
+            </div>
+            <button class="btn btn-primary w-100" type="submit">Sign in</button>
+        }
+    </div>
+</body>
+</html>

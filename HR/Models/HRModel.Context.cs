@@ -26,5 +26,10 @@ namespace HR.Models
         }
     
         public virtual DbSet<employeeInformation> employeeInformations { get; set; }
+        public virtual DbSet<CompanyInformation> CompanyInformations { get; set; }
+        public virtual DbSet<DepartmentInformation> DepartmentInformations { get; set; }
+        public virtual DbSet<AttendanceEntry> AttendanceEntries { get; set; }
+        public virtual DbSet<LeaveEntry> LeaveEntries { get; set; }
+        public virtual DbSet<Registration> Registrations { get; set; }
     }
 }

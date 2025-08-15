@@ -129,10 +129,24 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AttendanceEntriesController.cs" />
+    <Compile Include="Controllers\CompanyInformationsController.cs" />
+    <Compile Include="Controllers\DepartmentInformationsController.cs" />
     <Compile Include="Controllers\employeeInformationsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LeaveEntriesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AttendanceEntry.cs">
+      <DependentUpon>HRModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CompanyInformation.cs">
+      <DependentUpon>HRModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DepartmentInformation.cs">
+      <DependentUpon>HRModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\employeeInformation.cs">
       <DependentUpon>HRModel.tt</DependentUpon>
@@ -152,6 +166,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HRModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\LeaveEntry.cs">
+      <DependentUpon>HRModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registration.cs">
+      <DependentUpon>HRModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RegistrationsController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +248,32 @@
     <Content Include="Views\employeeInformations\Details.cshtml" />
     <Content Include="Views\employeeInformations\Edit.cshtml" />
     <Content Include="Views\employeeInformations\Index.cshtml" />
+    <Content Include="Views\CompanyInformations\Create.cshtml" />
+    <Content Include="Views\CompanyInformations\Delete.cshtml" />
+    <Content Include="Views\CompanyInformations\Details.cshtml" />
+    <Content Include="Views\CompanyInformations\Edit.cshtml" />
+    <Content Include="Views\CompanyInformations\Index.cshtml" />
+    <Content Include="Views\DepartmentInformations\Create.cshtml" />
+    <Content Include="Views\DepartmentInformations\Delete.cshtml" />
+    <Content Include="Views\DepartmentInformations\Details.cshtml" />
+    <Content Include="Views\DepartmentInformations\Edit.cshtml" />
+    <Content Include="Views\DepartmentInformations\Index.cshtml" />
+    <Content Include="Views\AttendanceEntries\Create.cshtml" />
+    <Content Include="Views\AttendanceEntries\Delete.cshtml" />
+    <Content Include="Views\AttendanceEntries\Details.cshtml" />
+    <Content Include="Views\AttendanceEntries\Edit.cshtml" />
+    <Content Include="Views\AttendanceEntries\Index.cshtml" />
+    <Content Include="Views\LeaveEntries\Create.cshtml" />
+    <Content Include="Views\LeaveEntries\Delete.cshtml" />
+    <Content Include="Views\LeaveEntries\Details.cshtml" />
+    <Content Include="Views\LeaveEntries\Edit.cshtml" />
+    <Content Include="Views\LeaveEntries\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Registrations\Create.cshtml" />
+    <Content Include="Views\Registrations\Delete.cshtml" />
+    <Content Include="Views\Registrations\Details.cshtml" />
+    <Content Include="Views\Registrations\Edit.cshtml" />
+    <Content Include="Views\Registrations\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
